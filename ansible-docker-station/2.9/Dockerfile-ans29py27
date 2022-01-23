@@ -1,0 +1,6 @@
+FROM oraclelinux:7
+RUN curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py
+RUN python get-pip.py
+RUN yum -y install libselinux-python
+RUN pip install --ignore-installed netaddr selinux oci ansible==2.9.25
+RUN ansible-galaxy collection install oracle.oci
