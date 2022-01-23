@@ -12,7 +12,7 @@ docker login (registry URL) -u '(username)' --password '(password)'
 
 docker push (registry url)/(username)/ansible-oci-runtime:(tag)
 
-Examples:
+### Examples
 
   docker tag localhost/ansible-oci-runtime:ans29py27 quay.io/mauriciogomez/ansible-oci-runtime:ans29py27
 
@@ -26,7 +26,7 @@ docker pull (registry URL)/(username)/ansible-oci-runtime:(tag)
 
 docker run -e USER=ansible -e MY_UID=(local user UID) -e MY_GID=(local user group UID) -v ~/.ssh:/root/.ssh -v ~/.oci:/root/.oci -v .:/workspace -w "/workspace" ansible-oci-runtime:(tag) ansible-playbook playbook.yaml
 
-Examples:
+### Examples
 
   docker pull quay.io/mauriciogomez/ansible-oci-runtime:ans29py27
 
